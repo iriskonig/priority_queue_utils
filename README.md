@@ -50,3 +50,10 @@ and `remove` and `decrease_key` raise `KeyError` for a missing key.
 - `priority(key) -> priority` — current priority for a key.
 - `remove(key) -> (key, priority)` — remove an arbitrary key.
 - `key in heap`, `len(heap)`, `bool(heap)` — membership and size.
+
+## Design notes
+
+The window stores values eagerly rather than keeping running aggregates. Running
+sums drift with floating point over long streams, and recomputing from a small
+buffer is cheap enough that the drift is not worth the speed.
+
