@@ -1,6 +1,6 @@
 [project]
 name = "priority-queue-utils"
-version = "0.1.0"
+version = "0.1.1"
 description = "A binary min-heap with stable handles and O(log n) decrease-key, so you can relax an edge or lower a cost without rebuilding the queue."
 requires-python = ">=3.10"
 dependencies = []
